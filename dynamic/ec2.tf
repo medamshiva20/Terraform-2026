@@ -12,7 +12,8 @@ resource "aws_instance" "ec2_instance"{
 resource "aws_security_group" "allow-all-tls"{
     name = "allow-all-terraform" # this is for AWS account
     description = "Allow TLS inbound traffic and all outbound traffic"
-
+    
+#Here ingress is going to be special variable 
  dynamic "ingress" {
         #for_each = var.ingress_rules
         for_each = toset(var.ingress_rules)

@@ -1,5 +1,5 @@
 variable "environment"{
-    default = "prod"
+    default = "Dev"
 }
 
 variable "ami_id"{

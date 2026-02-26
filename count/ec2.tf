@@ -2,7 +2,8 @@ resource "aws_instance" "example"{
     ami = var.ami_id
     instance_type = var.instance_type
     vpc_security_group_ids = [aws_security_group.allow-all-tls.id]
-    count = 10
+    #count = 10
+    count = length(var.instances)
     tags = {
         Name = var.instances[count.index]  
         Project = "Roboshop" 
