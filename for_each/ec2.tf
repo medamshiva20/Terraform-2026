@@ -4,6 +4,7 @@ resource "aws_instance" "ec2_instance"{
     for_each = toset(var.instances)
     #instance_type = each.value
     instance_type = "t2.micro"
+    vpc_security_group_ids = [aws_security_group.allow-all-tls.id]
 
     tags = {
         Name = each.key

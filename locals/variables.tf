@@ -12,13 +12,6 @@ variable "environment"{
  #   default = "${var.name}-${var.environment}"
 #}
 
-variable "common_tags"{
-    default = {
-        Project = "Roboshop"
-        Terraform = true
-        Environment = "Dev"
-    }
-}
 
 variable "ec2_tags"{
     default = {

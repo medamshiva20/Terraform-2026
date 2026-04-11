@@ -25,7 +25,7 @@ resource "aws_security_group" "Allow-tls"{
         cidr_blocks = ["0.0.0.0/0"]
     }
     tags = merge(
-        var.common_tags,
+        local.common_tags,
         var.sg_tags
     )
 }
